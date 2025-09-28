@@ -47,6 +47,8 @@ foreach (getNumbersArray() as $num) {
     // Because getNumbersArray() returns the FULL array,
     // PHP loads the entire [1, 2, 3, 4, 5] into memory at once.
     echo $num . PHP_EOL;
+    echo "Memory usage after loading data: " . (memory_get_usage(true) / 1024 / 1024) . " MB" . PHP_EOL;
+    echo "-------------------------" . PHP_EOL;
 }
 
 echo PHP_EOL . "Using Generator Function:" . PHP_EOL;
@@ -59,6 +61,8 @@ foreach (getNumbersGenerator() as $num) {
     //   - This continues until 5, then it ends.
     // Memory usage is tiny because nothing is pre-stored.
     echo $num . PHP_EOL;
+    echo "Memory usage after loading data: " . (memory_get_usage(true) / 1024 / 1024) . " MB" . PHP_EOL;
+    echo "-------------------------" . PHP_EOL;
 }
 
 
