@@ -34,7 +34,7 @@ function generatorWithPostLoop(int $limit): Generator {
 // ----------------------------------------------------------
 // CONFIGURATION
 // ----------------------------------------------------------
-ini_set('memory_limit', '1024M');
+ini_set('memory_limit', '1024M'); //setting memory limit to 1GB for testing purposes
 $limit = 50000;   // total items
 $size  = 1024;    // each string = 1 KB
 

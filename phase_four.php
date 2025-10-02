@@ -44,7 +44,7 @@ function readLogFile($filename) {
 
 foreach (readLogFile("https://norvig.com/big.txt") as $i => $line) { //$i is line number starting from 0 and $line is the content of that line
     // Process each line as needed
-    // Just print lines 11 to 15 as a demo
+    // Printing lines 11 to 15
      if ($i >= 10 && $i <= 14) {
         echo "Line " . ($i + 1) . ": " . trim($line) . PHP_EOL;
         echo "Memory used while streaming generator: " . formatMB(memory_get_usage(true)) . PHP_EOL;
